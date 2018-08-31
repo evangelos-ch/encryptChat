@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Firebolt.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ConnectController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="server-scene-pane">
+         <children>
+            <VBox alignment="CENTER" layoutX="61.0" layoutY="128.0" spacing="15.0">
+               <children>
+                  <Label styleClass="connect-label" text="Connect to Chat Server" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI" size="47.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <TextField fx:id="serverIP" prefWidth="108.0" promptText="Server IP" styleClass="connect-field" />
+                        <Spinner fx:id="serverPort" editable="true" prefWidth="80.0" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#connectToServer" prefWidth="100.0" styleClass="connect-btn" text="Connect" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
